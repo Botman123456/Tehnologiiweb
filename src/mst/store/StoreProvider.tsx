@@ -1,3 +1,4 @@
+import LoginRootStore from "../../lab6/LoginRootStore";
 import RootStore from "./RootStore";
 
 const storeProvider = RootStore.create({
@@ -27,8 +28,14 @@ const storeProvider = RootStore.create({
         }
     ]
 })
-
-
-
-
 export default storeProvider;
+
+export const loginPorvider = LoginRootStore.create({
+    contents:[
+        {
+            id: '1',
+            username: 'admin',
+            password: 'admin',
+        }
+    ]
+})
