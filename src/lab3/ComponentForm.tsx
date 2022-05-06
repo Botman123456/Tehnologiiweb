@@ -1,4 +1,5 @@
 import { Form, Input, Button } from 'antd';
+import { Content } from 'antd/lib/layout/layout';
 
 
 export const ComponentForm = () => {
@@ -44,4 +45,20 @@ export const ComponentForm = () => {
         </Form.Item>
         </Form>
     )
+}
+
+export const MyForm = () => {
+    return(
+        <>
+            <main>
+                    <Content style={{ padding: '0 50px' }}>
+                    <div>
+
+                       <ComponentForm />
+
+                    </div>
+                    </Content>
+                </main>
+        </>
+    );
 }

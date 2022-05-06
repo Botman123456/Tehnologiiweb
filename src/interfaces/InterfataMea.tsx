@@ -1,6 +1,8 @@
 import { number } from "mobx-state-tree/dist/internal"
 import Interfata2 from "./Interfata2"
 import "../lab3/stiluri.css";
+import { Content } from "antd/lib/layout/layout";
+import { infoInterfata } from "../lab3/ComponentLayout";
 
 export const ShowInterfataMea = (props: Interfata2) => {
     return (
@@ -25,5 +27,24 @@ export const ShowInterfataMea = (props: Interfata2) => {
                 </tr>
             </table>
         </div>
+    )
+}
+
+export const Interfata = () => {
+    return(
+        <>
+             <main>
+                    <Content style={{ padding: '0 50px' }}>
+                    
+
+                    <div>
+                        <ShowInterfataMea myData1={infoInterfata} myData2={infoInterfata}/>
+                    </div>
+
+                    
+                    </Content>
+
+                </main>
+        </>
     )
 }

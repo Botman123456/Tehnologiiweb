@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
 import './lab3/stiluri.css';
 import './App.css';
-import { ComponentLayout } from './lab3/ComponentLayout';
 import { MyHeader } from './page-components/Header';
 import { MyFooter } from './page-components/Footer';
-import { MyLogin } from './Forms/Login';
 import { useLoginStore, useRootStore } from '.';
 
 function App() {
@@ -24,9 +21,6 @@ function App() {
   return (
     <>
       <MyHeader />
-
-        <MyLogin />
-        
       <MyFooter />
     </>
   );
