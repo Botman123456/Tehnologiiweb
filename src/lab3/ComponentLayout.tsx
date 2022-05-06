@@ -1,4 +1,5 @@
 import { Layout, Menu, Breadcrumb } from 'antd';
+import { ShowInterfataMea } from '../interfaces/InterfataMea';
 import { ComponentCard } from './ComponentCard';
 import { ComponentForm } from './ComponentForm';
 import './stiluri.css';
@@ -38,6 +39,16 @@ const informatiiCard = [
     },
 ]
 
+const infoInterfata = {
+    id: 1,
+    nume: "Adasan",
+    prenume: "Cristian",
+    email: "cristi.adasan@email.com",
+    varsta: 21,
+    adresa: "Strada Teilor 14",
+    s_f: "frate"
+}
+
 export const ComponentLayout = () =>{
     return(
 
@@ -70,6 +81,10 @@ export const ComponentLayout = () =>{
 
                        <ComponentForm />
 
+                    </div>
+
+                    <div>
+                        <ShowInterfataMea myData1={infoInterfata} myData2={infoInterfata}/>
                     </div>
                     </Content>
                 </main>
