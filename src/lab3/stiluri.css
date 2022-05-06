@@ -35,3 +35,10 @@ main {
     grid-row-gap: 10px;
     grid-column-gap: 10px;
 }
+
+table, tr, td, th{
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  text-align: center;
+}
