@@ -1,11 +1,11 @@
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout} from 'antd';
 import { ShowInterfataMea } from '../interfaces/InterfataMea';
 import { ComponentCard } from './ComponentCard';
 import { ComponentForm } from './ComponentForm';
 import {ContentData} from './ContentData'
-import './stiluri.css';
 
-const { Header, Content, Footer } = Layout;
+
+const { Content } = Layout;
 
 const informatiiCard = [
     {
@@ -55,15 +55,7 @@ export const ComponentLayout = () =>{
 
         <>
             <Layout className="layout">
-                <Header>
-                <div className="logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                    {new Array(5).fill(null).map((_, index) => {
-                    const key = index + 1;
-                    return <Menu.Item key={key}>{`Meniu ${key}`}</Menu.Item>;
-                    })}
-                </Menu>
-                </Header>
+                
                 <main>
                     <Content style={{ padding: '0 50px' }}>
                     <div className="site-layout-content grid">
@@ -96,7 +88,6 @@ export const ComponentLayout = () =>{
 
 
                 </main>
-                <Footer style={{ textAlign: 'center' }}>Adasan Cristi, CR-191</Footer>
             </Layout>
         </>
 

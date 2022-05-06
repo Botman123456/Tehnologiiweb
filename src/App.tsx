@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
+import './lab3/stiluri.css';
 import './App.css';
 import { ComponentLayout } from './lab3/ComponentLayout';
-import { ComponentCard } from './lab3/ComponentCard';
+import { MyHeader } from './page-components/Header';
+import { MyFooter } from './page-components/Footer';
+import { MyLogin } from './Forms/Login';
+import { useLoginStore, useRootStore } from '.';
 
 function App() {
+
+  const rootStore = useRootStore()
+  const logStore = useLoginStore();
+
+  useEffect(() => {
+      rootStore.setInitialStorageContents()
+  }, [])
+
+  useEffect(() => {
+    logStore.setInitialStorageContents()
+  }, [])
+
   return (
     <>
-      <ComponentLayout />
+      <MyHeader />
+
+        <MyLogin />
+        
+      <MyFooter />
     </>
   );
 }

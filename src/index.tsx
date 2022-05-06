@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { IRootStore } from './interfaces/Interfata2';
-import storeProvider from './mst/store/StoreProvider';
+import { ILoginStore, IRootStore } from './interfaces/Interfata2';
+import storeProvider, { loginPorvider } from './mst/store/StoreProvider';
 
 
 const StoreContext = React.createContext<IRootStore | any>(null);
+const LoginContext = React.createContext<ILoginStore | any>(null);
 
 export const useRootStore = () => React.useContext(StoreContext);
+export const useLoginStore = () => React.useContext(LoginContext);
 
 const StoreProvider = ({ children }: { children: ReactElement }) => {
   return (
@@ -19,10 +21,20 @@ const StoreProvider = ({ children }: { children: ReactElement }) => {
   )
 }
 
+const LoginProvider = ({ children }: { children: ReactElement }) => {
+  return (
+      <LoginContext.Provider value={ loginPorvider }>
+          { children }
+      </LoginContext.Provider>
+  )
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <StoreProvider>
-      <App />
+      <LoginProvider>
+        <App />
+      </LoginProvider>
     </StoreProvider>
   </React.StrictMode>,
   document.getElementById('root')
