@@ -7,7 +7,7 @@ import {ContentData} from './ContentData'
 
 const { Content } = Layout;
 
-const informatiiCard = [
+export const informatiiCard = [
     {
         id: 1,
         titlu: "Titlu1",
@@ -40,7 +40,7 @@ const informatiiCard = [
     },
 ]
 
-const infoInterfata = {
+export const infoInterfata = {
     id: 1,
     nume: "Adasan",
     prenume: "Cristian",
@@ -50,7 +50,7 @@ const infoInterfata = {
     s_f: "frate"
 }
 
-export const ComponentLayout = () =>{
+export const MyContent = () =>{
     return(
 
         <>
@@ -58,35 +58,8 @@ export const ComponentLayout = () =>{
                 
                 <main>
                     <Content style={{ padding: '0 50px' }}>
-                    <div className="site-layout-content grid">
-                       {
-                           informatiiCard.map((el, index)=>{
-                               return(
-                                   <ComponentCard key={ el.id } title={ el.titlu } description={ el.descriere } />
-                               )
-                           })
-                       } 
-                    </div>
-
-                    <br />
-
-                    <div>
-
-                       <ComponentForm />
-
-                    </div>
-
-                    <div>
-                        <ShowInterfataMea myData1={infoInterfata} myData2={infoInterfata}/>
-                    </div>
-
-                    
+                        <ContentData/>
                     </Content>
-
-
-                    <ContentData/>
-
-
                 </main>
             </Layout>
         </>
