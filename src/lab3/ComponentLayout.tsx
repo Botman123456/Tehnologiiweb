@@ -2,6 +2,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import { ShowInterfataMea } from '../interfaces/InterfataMea';
 import { ComponentCard } from './ComponentCard';
 import { ComponentForm } from './ComponentForm';
+import {ContentData} from './ContentData'
 import './stiluri.css';
 
 const { Header, Content, Footer } = Layout;
@@ -86,7 +87,14 @@ export const ComponentLayout = () =>{
                     <div>
                         <ShowInterfataMea myData1={infoInterfata} myData2={infoInterfata}/>
                     </div>
+
+                    
                     </Content>
+
+
+                    <ContentData/>
+
+
                 </main>
                 <Footer style={{ textAlign: 'center' }}>Adasan Cristi, CR-191</Footer>
             </Layout>
